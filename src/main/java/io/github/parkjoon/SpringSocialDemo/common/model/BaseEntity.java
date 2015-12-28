@@ -1,4 +1,4 @@
-package io.github.parkjoon.common.model;
+package io.github.parkjoon.SpringSocialDemo.common.model;
 
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;

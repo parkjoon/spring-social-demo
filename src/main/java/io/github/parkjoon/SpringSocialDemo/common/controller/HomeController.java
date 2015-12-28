@@ -1,4 +1,4 @@
-package io.github.parkjoon.common.controller;
+package io.github.parkjoon.SpringSocialDemo.common.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

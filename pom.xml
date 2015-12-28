@@ -19,6 +19,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>io.github.parkjoon.SpringSocialDemo.config.Application</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
