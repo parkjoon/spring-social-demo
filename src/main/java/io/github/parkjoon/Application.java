@@ -10,15 +10,17 @@ import java.util.Arrays;
 public class Application {
 
     public static void main(String[] args) {
+        boolean listBeans = false;
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
+        if(listBeans) {
+            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+            System.out.println("Listing beans provided by Spring Boot:");
 
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        System.out.println("Beans provided by Spring Boot:");
-
-        String[] beanNames = ctx.getBeanDefinitionNames();
-        Arrays.sort(beanNames);
-        for (String beanName : beanNames) {
-            System.out.println(beanName);
+            String[] beanNames = ctx.getBeanDefinitionNames();
+            Arrays.sort(beanNames);
+            for (String beanName : beanNames) {
+                System.out.println(beanName);
+            }
         }
     }
 
