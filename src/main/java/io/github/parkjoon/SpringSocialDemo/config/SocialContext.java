@@ -1,7 +1,6 @@
 package io.github.parkjoon.SpringSocialDemo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -30,6 +29,7 @@ public class SocialContext implements SocialConfigurer{
 
     /**
      * Configures the connection factories for Facebook.
+     * (Add Google Connection Factory here.)
      */
     @Override
     public void addConnectionFactories(ConnectionFactoryConfigurer cfConfig, Environment env) {
@@ -42,6 +42,7 @@ public class SocialContext implements SocialConfigurer{
     /**
      * The UserIdSource determines the account ID of the user.
      * The demo application uses the username as the account ID.
+     * (Maybe change this?)
      */
     @Override
     public UserIdSource getUserIdSource() {
@@ -55,8 +56,7 @@ public class SocialContext implements SocialConfigurer{
                 connectionFactoryLocator,
                 /**
                  * The TextEncryptor object encrypts the authorization details of the connection. In
-                 * our example, the authorization details are stored as plain text.
-                 * DO NOT USE THIS IN PRODUCTION.
+                 * our example, the authorization details are stored as PLAIN text.
                  */
                 Encryptors.noOpText()
         );
