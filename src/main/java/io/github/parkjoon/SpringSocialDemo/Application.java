@@ -20,8 +20,8 @@ import java.util.Arrays;
 @SpringBootApplication
 
 @ComponentScan(basePackages = {
-        "io.github.parkjoon.SpringSocialDemo.**.service"})
-@Import({ WebAppContext.class, PersistenceContext.class, SecurityContext.class, SocialContext.class })
+        "io.github.parkjoon.SpringSocialDemo.user.service"})
+@Import({ WebAppContext.class, PersistenceContext.class, /*SecurityContext.class,*/ SocialContext.class })
 @PropertySource("classpath:application.properties")
 public class Application {
 
@@ -49,6 +49,7 @@ public class Application {
     public MessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
         messageSource.setBasename(MESSAGE_SOURCE_BASE_NAME);
+        messageSource.setDefaultEncoding("UTF-8");
         messageSource.setUseCodeAsDefaultMessage(true);
 
         return messageSource;

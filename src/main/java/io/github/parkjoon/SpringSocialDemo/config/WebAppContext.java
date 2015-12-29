@@ -1,18 +1,23 @@
 package io.github.parkjoon.SpringSocialDemo.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
 @ComponentScan(basePackages = {
-        "io.github.parkjoon.SpringSocialDemo.**.controller"})
+        "io.github.parkjoon.SpringSocialDemo.common.controller",
+        "io.github.parkjoon.SpringSocialDemo.security.controller",
+        "io.github.parkjoon.SpringSocialDemo.user.controller"})
 @EnableWebMvc
 public class WebAppContext extends WebMvcConfigurerAdapter{
 
-//        private static final String VIEW_RESOLVER_PREFIX = "/WEB-INF/jsp/";
-//        private static final String VIEW_RESOLVER_SUFFIX = ".jsp";
+//        private static final String VIEW_RESOLVER_PREFIX = "/templates/";
+//        private static final String VIEW_RESOLVER_SUFFIX = ".html";
 //
 //        @Override
 //        public void addResourceHandlers(ResourceHandlerRegistry registry) {

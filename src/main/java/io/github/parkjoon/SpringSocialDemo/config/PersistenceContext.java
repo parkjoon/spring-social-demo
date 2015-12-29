@@ -20,13 +20,14 @@ import java.util.Properties;
 
 @Configuration
 @EnableJpaRepositories(basePackages = {
-        "io.github.parkjoon.SpringSocialDemo.**.repository"
+        "io.github.parkjoon.SpringSocialDemo.user.repository"
 })
 @EnableTransactionManagement
 public class PersistenceContext {
 
     private static final String[] PROPERTY_PACKAGES_TO_SCAN = {
-            "io.github.parkjoon.SpringSocialDemo.**.model"
+            "io.github.parkjoon.SpringSocialDemo.common.model",
+            "io.github.parkjoon.SpringSocialDemo.user.model"
     };
 
     protected static final String PROPERTY_NAME_DATABASE_DRIVER = "spring.datasource.driverClassName";
