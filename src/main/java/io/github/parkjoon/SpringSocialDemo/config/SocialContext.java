@@ -34,8 +34,8 @@ public class SocialContext implements SocialConfigurer{
     @Override
     public void addConnectionFactories(ConnectionFactoryConfigurer cfConfig, Environment env) {
         cfConfig.addConnectionFactory(new FacebookConnectionFactory(
-                env.getProperty("facebook.app.id"),
-                env.getProperty("facebook.app.secret")
+            env.getProperty("facebook.app.id"),
+            env.getProperty("facebook.app.secret")
         ));
     }
 
@@ -52,13 +52,13 @@ public class SocialContext implements SocialConfigurer{
     @Override
     public UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
         return new JdbcUsersConnectionRepository(
-                dataSource,
-                connectionFactoryLocator,
-                /**
-                 * The TextEncryptor object encrypts the authorization details of the connection. In
-                 * our example, the authorization details are stored as PLAIN text.
-                 */
-                Encryptors.noOpText()
+            dataSource,
+            connectionFactoryLocator,
+            /**
+             * The TextEncryptor object encrypts the authorization details of the connection. In
+             * our example, the authorization details are stored as PLAIN text.
+             */
+            Encryptors.noOpText()
         );
     }
 

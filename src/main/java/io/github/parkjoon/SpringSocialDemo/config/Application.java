@@ -20,17 +20,17 @@ import java.util.Arrays;
 @EnableTransactionManagement
 @ComponentScan(basePackages = {
         "io.github.parkjoon.SpringSocialDemo"})
-@Import({WebAppContext.class, SecurityContext.class, SocialContext.class})
+@Import({WebAppContext.class, /*SecurityContext.class,*/ SocialContext.class})
 @PropertySource("classpath:application.properties")
 public class Application {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
-//        listBeansCreated(ctx);
+        listBeansCreated(ctx);
     }
 
     public static void listBeansCreated(ApplicationContext ctx) {
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         System.out.println("Listing beans provided by Spring Boot:");
 
         String[] beanNames = ctx.getBeanDefinitionNames();
@@ -38,7 +38,7 @@ public class Application {
         for (String beanName : beanNames) {
             System.out.println(beanName);
         }
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     }
 
     @Bean
