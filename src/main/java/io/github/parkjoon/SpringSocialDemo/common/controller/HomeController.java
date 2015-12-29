@@ -17,10 +17,9 @@ public class HomeController {
     }
 
     // Test mapping
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    @ResponseBody
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String greet() {
-        return "Hello!";
+        return "test";
     }
 
     // Test mapping
