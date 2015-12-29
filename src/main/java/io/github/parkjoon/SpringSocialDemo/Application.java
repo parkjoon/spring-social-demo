@@ -7,13 +7,13 @@ import io.github.parkjoon.SpringSocialDemo.config.WebAppContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.context.support.ResourceBundleMessageSource;
 
 import java.util.Arrays;
 
@@ -22,7 +22,11 @@ import java.util.Arrays;
 @ComponentScan(basePackages = {
         "io.github.parkjoon.SpringSocialDemo.**.service"})
 @Import({ WebAppContext.class, PersistenceContext.class, SecurityContext.class, SocialContext.class })
+@PropertySource("classpath:application.properties")
 public class Application {
+
+    // Refactor to external variable.
+    private static final String MESSAGE_SOURCE_BASE_NAME = "i18n/messages";
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
@@ -39,6 +43,15 @@ public class Application {
             System.out.println(beanName);
         }
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+    }
+
+    @Bean
+    public MessageSource messageSource() {
+        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+        messageSource.setBasename(MESSAGE_SOURCE_BASE_NAME);
+        messageSource.setUseCodeAsDefaultMessage(true);
+
+        return messageSource;
     }
 
     @Bean

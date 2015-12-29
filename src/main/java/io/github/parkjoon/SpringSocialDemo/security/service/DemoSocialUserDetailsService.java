@@ -22,9 +22,7 @@ public class DemoSocialUserDetailsService implements SocialUserDetailsService {
     /**
      * Loads the username by using the account ID of the user.
      * @param userId    The account ID of the requested user.
-     * @return  The information of the requested user.
-     * @throws UsernameNotFoundException    Thrown if no user is found.
-     * @throws DataAccessException
+     * @return          The information of the requested user.
      */
     @Override
     public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException, DataAccessException {
