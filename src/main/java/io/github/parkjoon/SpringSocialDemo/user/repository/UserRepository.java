@@ -1,7 +1,10 @@
 package io.github.parkjoon.SpringSocialDemo.user.repository;
 
-/**
- * Created by parkjoon on 12/29/2015.
- */
-public class UserRepository {
+import io.github.parkjoon.SpringSocialDemo.user.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    User findByEmail(String email);
+
 }

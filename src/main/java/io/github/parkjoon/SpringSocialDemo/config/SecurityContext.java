@@ -85,7 +85,7 @@ public class SecurityContext extends WebSecurityConfigurerAdapter{
 //     */
 //    @Bean
 //    public SocialUserDetailsService socialUserDetailsService() {
-//        return new SimpleSocialUserDetailsService(userDetailsService());
+//        return new DemoSocialUserDetailsService(userDetailsService());
 //    }
 //
 //    /**
