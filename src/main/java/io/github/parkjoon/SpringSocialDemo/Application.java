@@ -22,7 +22,6 @@ import java.util.Arrays;
 @ComponentScan(basePackages = {
         "io.github.parkjoon.SpringSocialDemo.**.service"})
 @Import({ WebAppContext.class, PersistenceContext.class, SecurityContext.class, SocialContext.class })
-@PropertySource("classpath:application.properties")
 public class Application {
 
     public static void main(String[] args) {

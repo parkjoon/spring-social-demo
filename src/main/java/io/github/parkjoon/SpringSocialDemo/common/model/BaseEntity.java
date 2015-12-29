@@ -16,6 +16,9 @@ public abstract class BaseEntity<ID> {
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime modificationTime;
 
+    @Version
+    private long version;
+
     public abstract ID getId();
 
     public DateTime getCreationTime() {
@@ -24,6 +27,10 @@ public abstract class BaseEntity<ID> {
 
     public DateTime getModificationTime() {
         return modificationTime;
+    }
+
+    public long getVersion() {
+        return version;
     }
 
     @PrePersist
