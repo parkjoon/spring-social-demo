@@ -1,5 +1,8 @@
-package io.github.parkjoon.SpringSocialDemo.config;
+package io.github.parkjoon.SpringSocialDemo;
 
+import io.github.parkjoon.SpringSocialDemo.config.PersistenceContext;
+import io.github.parkjoon.SpringSocialDemo.config.SocialContext;
+import io.github.parkjoon.SpringSocialDemo.config.WebAppContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,19 +17,16 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import java.util.Arrays;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = {
-        "io.github.parkjoon.SpringSocialDemo"
-})
-@EnableTransactionManagement
+
 @ComponentScan(basePackages = {
-        "io.github.parkjoon.SpringSocialDemo"})
-@Import({WebAppContext.class, /*SecurityContext.class,*/ SocialContext.class})
+        "io.github.parkjoon.SpringSocialDemo.**.service"}) // Might have to change this
+@Import({ WebAppContext.class, PersistenceContext.class, /*SecurityContext.class,*/ SocialContext.class })
 @PropertySource("classpath:application.properties")
 public class Application {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
-        listBeansCreated(ctx);
+        // listBeansCreated(ctx);
     }
 
     public static void listBeansCreated(ApplicationContext ctx) {
@@ -42,7 +42,7 @@ public class Application {
     }
 
     @Bean
-    public PropertySourcesPlaceholderConfigurer propertyPlaceHolderConfigurer() {
+    public static PropertySourcesPlaceholderConfigurer propertyPlaceHolderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
 

@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @ComponentScan(basePackages = {
-        "io.github.parkjoon.SpringSocialDemo"})
+        "io.github.parkjoon.SpringSocialDemo.**.controller"})
 @EnableWebMvc
 public class WebAppContext {
 
