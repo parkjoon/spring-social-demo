@@ -15,6 +15,7 @@ import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
 import org.springframework.social.connect.web.ConnectController;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
+import org.springframework.social.google.connect.GoogleConnectionFactory;
 import org.springframework.social.security.AuthenticationNameUserIdSource;
 
 import javax.annotation.Resource;
@@ -29,7 +30,6 @@ public class SocialContext implements SocialConfigurer{
 
     /**
      * Configures the connection factories for Facebook.
-     * (Add Google Connection Factory here.)
      */
     @Override
     public void addConnectionFactories(ConnectionFactoryConfigurer cfConfig, Environment env) {
@@ -37,6 +37,11 @@ public class SocialContext implements SocialConfigurer{
             env.getProperty("facebook.app.id"),
             env.getProperty("facebook.app.secret")
         ));
+
+//        cfConfig.addConnectionFactory(new GoogleConnectionFactory(
+//                env.getProperty("google.consumerKey"),
+//                env.getProperty("google.consumerSecret")
+//        ));
     }
 
     /**
@@ -55,8 +60,8 @@ public class SocialContext implements SocialConfigurer{
             dataSource,
             connectionFactoryLocator,
             /**
-             * The TextEncryptor object encrypts the authorization details of the connection. In
-             * our example, the authorization details are stored as PLAIN text.
+             * The TextEncryptor encrypts the authorization details of the connection.
+             * Here, the authorization details are stored as PLAINTEXT.
              */
             Encryptors.noOpText()
         );

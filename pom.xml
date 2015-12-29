@@ -83,6 +83,13 @@
             <artifactId>spring-social-facebook</artifactId>
         </dependency>
 
+        <!-- Spring Social Google -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-google</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+
         <!-- Postgres -->
         <dependency>
             <groupId>org.postgresql</groupId>

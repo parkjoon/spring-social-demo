@@ -1,6 +1,7 @@
 package io.github.parkjoon.SpringSocialDemo;
 
 import io.github.parkjoon.SpringSocialDemo.config.PersistenceContext;
+import io.github.parkjoon.SpringSocialDemo.config.SecurityContext;
 import io.github.parkjoon.SpringSocialDemo.config.SocialContext;
 import io.github.parkjoon.SpringSocialDemo.config.WebAppContext;
 import org.springframework.boot.SpringApplication;
@@ -19,8 +20,8 @@ import java.util.Arrays;
 @SpringBootApplication
 
 @ComponentScan(basePackages = {
-        "io.github.parkjoon.SpringSocialDemo.**.service"}) // Might have to change this
-@Import({ WebAppContext.class, PersistenceContext.class, /*SecurityContext.class,*/ SocialContext.class })
+        "io.github.parkjoon.SpringSocialDemo.**.service"})
+@Import({ WebAppContext.class, PersistenceContext.class, SecurityContext.class, SocialContext.class })
 @PropertySource("classpath:application.properties")
 public class Application {
 

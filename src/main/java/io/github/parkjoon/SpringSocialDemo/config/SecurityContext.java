@@ -1,23 +1,23 @@
-//package io.github.parkjoon.SpringSocialDemo.config;
-//
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.context.annotation.Configuration;
-//import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-//import org.springframework.security.config.annotation.web.builders.WebSecurity;
-//import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-//import org.springframework.security.core.userdetails.UserDetailsService;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-//import org.springframework.security.crypto.password.PasswordEncoder;
-//import org.springframework.social.security.SocialUserDetailsService;
-//import org.springframework.social.security.SpringSocialConfigurer;
-//
-//@Configuration
-//@EnableWebSecurity
-//public class SecurityContext extends WebSecurityConfigurerAdapter{
-//
+package io.github.parkjoon.SpringSocialDemo.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.social.security.SocialUserDetailsService;
+import org.springframework.social.security.SpringSocialConfigurer;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityContext extends WebSecurityConfigurerAdapter{
+
 //    @Autowired
 //    private DemoUserRepository demoUserRepository;
 //
@@ -95,6 +95,5 @@
 //    public UserDetailsService userDetailsService() {
 //        return new RepositoryUserDetailsService(userRepository);
 //    }
-//
-//
-//}
+
+}
