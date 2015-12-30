@@ -21,7 +21,7 @@ import java.util.Arrays;
 
 @ComponentScan(basePackages = {
         "io.github.parkjoon.SpringSocialDemo.user.service"})
-@Import({ WebAppContext.class, PersistenceContext.class, /*SecurityContext.class,*/ SocialContext.class })
+@Import({ WebAppContext.class, PersistenceContext.class, SecurityContext.class, SocialContext.class })
 @PropertySource("classpath:application.properties")
 public class Application {
 
@@ -30,7 +30,7 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
-         // listBeansCreated(ctx);
+        // listBeansCreated(ctx);
     }
 
     public static void listBeansCreated(ApplicationContext ctx) {

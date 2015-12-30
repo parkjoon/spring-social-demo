@@ -1,20 +1,22 @@
 package io.github.parkjoon.SpringSocialDemo.user.model;
 
+import io.github.parkjoon.SpringSocialDemo.user.validation.PasswordsNotEmpty;
+import io.github.parkjoon.SpringSocialDemo.user.validation.PasswordsNotEqual;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Size;
 
-//@PasswordsNotEmpty(
-//        triggerFieldName = "signInProvider",
-//        passwordFieldName = "password",
-//        passwordVerificationFieldName = "passwordVerification"
-//)
-//@PasswordsNotEqual(
-//        passwordFieldName = "password",
-//        passwordVerificationFieldName = "passwordVerification"
-//)
+@PasswordsNotEmpty(
+        triggerFieldName = "signInProvider",
+        passwordFieldName = "password",
+        passwordVerificationFieldName = "passwordVerification"
+        )
+@PasswordsNotEqual(
+        passwordFieldName = "password",
+        passwordVerificationFieldName = "passwordVerification"
+)
 public class RegistrationForm {
 
     public static final String FIELD_NAME_EMAIL = "email";
