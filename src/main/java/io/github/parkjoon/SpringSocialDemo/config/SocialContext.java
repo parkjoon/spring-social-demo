@@ -18,7 +18,6 @@ import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 import org.springframework.social.google.connect.GoogleConnectionFactory;
 import org.springframework.social.security.AuthenticationNameUserIdSource;
 
-import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 @Configuration
@@ -38,10 +37,10 @@ public class SocialContext implements SocialConfigurer{
             env.getProperty("facebook.app.secret")
         ));
 
-//        cfConfig.addConnectionFactory(new GoogleConnectionFactory(
-//                env.getProperty("google.consumerKey"),
-//                env.getProperty("google.consumerSecret")
-//        ));
+        cfConfig.addConnectionFactory(new GoogleConnectionFactory(
+                env.getProperty("google.consumerKey"),
+                env.getProperty("google.consumerSecret")
+        ));
     }
 
     /**

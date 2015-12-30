@@ -50,7 +50,7 @@
             </ul>
             <p sec:authorize="isAuthenticated()" class="nav navbar-nav navbar-right navbar-text sign-in-text">
                 <i class="icon-facebook-sign" th:if="${#authentication.principal.socialSignInProvider} == 'FACEBOOK'"></i>
-                <i class="icon-twitter-sign" th:if="${#authentication.principal.socialSignInProvider} == 'TWITTER'"></i>
+                <i class="icon-google-plus-sign" th:if="${#authentication.principal.socialSignInProvider} == 'TWITTER'"></i>
                 <span  th:text="#{label.navigation.signed.in.as.text}" th:if="${#authentication.principal.socialSignInProvider} != null">Signed in as</span>
                 <span sec:authentication="principal.username"></span>
             </p>

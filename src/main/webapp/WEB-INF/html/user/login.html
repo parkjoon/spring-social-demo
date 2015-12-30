@@ -60,7 +60,7 @@
             </div>
             <div class="row social-button-row">
                 <div class="col-lg-4">
-                    <a href="/auth/google" th:href="@{/auth/google}"><button class="btn btn-google-plus" th:inline="text"><i class="icon-google-plus"></i> | [[#{label.google.sign.in.button}]]</button></a>
+                    <a href="/auth/google" th:href="@{/auth/google(scope='profile')}"><button class="btn btn-google-plus" th:inline="text"><i class="icon-google-plus"></i> | [[#{label.google.sign.in.button}]]</button></a>
                 </div>
             </div>
         </div>

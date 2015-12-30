@@ -18,7 +18,7 @@ public class HomeController {
 
     // Test mapping
     @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public String greet() {
+    public String showTestPage() {
         return "test";
     }
 

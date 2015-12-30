@@ -8,6 +8,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 public class SecurityUtil {
 
+    /**
+     * REFACTOR ME!
+     */
     public static void logInUser(User user) {
         DemoUserDetails userDetails = DemoUserDetails.getBuilder()
                 .firstName(user.getFirstName())
