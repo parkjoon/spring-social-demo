@@ -4,12 +4,12 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/io/github/parkjoon/SpringSocialDemo/config/Application.java</file>
           <file>file://$MODULE_DIR$/src/main/java/io/github/parkjoon/SpringSocialDemo/config/SocialContext.java</file>
           <file>file://$MODULE_DIR$/src/main/java/io/github/parkjoon/SpringSocialDemo/config/WebAppContext.java</file>
           <file>file://$MODULE_DIR$/src/main/java/io/github/parkjoon/SpringSocialDemo/config/PersistenceContext.java</file>
           <file>file://$MODULE_DIR$/src/main/java/io/github/parkjoon/SpringSocialDemo/config/SecurityContext.java</file>
           <file>file://$MODULE_DIR$/src/main/java/io/github/parkjoon/SpringSocialDemo/config/ThymeleafContext.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/io/github/parkjoon/SpringSocialDemo/Application.java</file>
         </fileset>
       </configuration>
     </facet>
@@ -63,7 +63,6 @@
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
     <orderEntry type="library" name="Maven: org.jboss:jandex:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
-    <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.0.b2" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.5.Final" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
@@ -75,8 +74,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:4.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:1.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.3.1" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:2.4.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" level="project" />
@@ -106,5 +103,10 @@
     <orderEntry type="library" name="Maven: org.thymeleaf:thymeleaf:2.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: ognl:ognl:3.0.8" level="project" />
     <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:2.4.4" level="project" />
+    <orderEntry type="library" name="Maven: net.sourceforge.nekohtml:nekohtml:1.9.22" level="project" />
+    <orderEntry type="library" name="Maven: xerces:xercesImpl:2.11.0" level="project" />
+    <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
   </component>
 </module>
