@@ -18,7 +18,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import java.util.Arrays;
 
 @SpringBootApplication
-
 @ComponentScan(basePackages = {
         "io.github.parkjoon.SpringSocialDemo.user.service"})
 @Import({ WebAppContext.class, PersistenceContext.class, SecurityContext.class, SocialContext.class })
